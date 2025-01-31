@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Diskon</title>
+  <script>
+    function hitung() {
+      const total = parseFloat(document.getElementById("total").value);
+      const diskon = total > 1500000 ? 0.15 : total > 500000 ? 0.10 : 0;
+      const bayar = total - (total * diskon);
+      document.getElementById("hasil").textContent = `Diskon: Rp${(total * diskon).toFixed(2)}, Total Bayar: Rp${bayar.toFixed(2)}`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Hitung Diskon</h1>
+  <input id="total" type="number" placeholder="Total Belanja">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+</body>
+</html>

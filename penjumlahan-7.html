@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator</title>
+  <script>
+    function hitung() {
+      const a = parseFloat(document.getElementById("a").value);
+      const b = parseFloat(document.getElementById("b").value);
+      const op = document.getElementById("op").value;
+      let hasil;
+      if (op === "+") hasil = a + b;
+      else if (op === "-") hasil = a - b;
+      else if (op === "*") hasil = a * b;
+      else if (op === "/") hasil = b !== 0 ? a / b : "Error (bagi nol)";
+      document.getElementById("hasil").textContent = `Hasil: ${hasil}`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Kalkulator</h1>
+  <input id="a" type="number" placeholder="Angka 1"> 
+  <select id="op">
+    <option>+</option><option>-</option><option>*</option><option>/</option>
+  </select> 
+  <input id="b" type="number" placeholder="Angka 2">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+</body>
+</html>

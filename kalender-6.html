@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulan Hijriyah</title>
+</head>
+<body>
+    <script>
+        var jawab = prompt("Masukan Kode Untuk Melihat Nama-Nama Bulan Dalam Kalender Jawa ");
+        var Bulan = ""; 
+
+        switch(jawab){
+            case "1":
+                Bulan = "Muharram";
+                break;
+            case "2":
+                Bulan = "Safar";
+                break;
+            case "3":
+                Bulan = "Rabu'ul awal";
+                break;
+            case "4":
+                Bulan = "Rabi'ul akhir";
+                break; 
+            case "5":
+                Bulan = "jumadil awal";
+                break;
+            case "6":
+                Bulan = "Jumadil akhir";
+                break;
+            case "7":
+                Bulan = "Rajab";
+                break;
+            case "8":
+                Bulan = "Sya'ban";
+                break;
+            case "9": 
+                Bulan = "Ramadhan";
+                break;
+            case "10":
+                BUlan = "Syawal";
+                break;
+            case "11":
+                Bulan = "Dzulqa'dah";
+                break;
+            case "12": 
+                Bulan = "Dzulhijjah";
+                break;
+            default:
+                document.write("<p>Maaf! Apa Yang Anda Pilih!</p>");
+        }
+
+        if(Bulan === ""){
+        } else {
+            document.write("<h2>Bulan " + Bulan + "</h2>");
+        }
+    </script>
+</body>
+</html>
